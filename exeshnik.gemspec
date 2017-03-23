@@ -18,15 +18,26 @@ Gem::Specification.new do |s|
     "README.md"
   ]
   s.files = [
-    ".ruby-version",
     "Gemfile",
     "Gemfile.lock",
     "LICENSE",
     "README.md",
     "Rakefile",
     "VERSION",
+    "exeshnik.gemspec",
     "init.rb",
-    "install"
+    "install",
+    "lib/exeshnik.rb",
+    "lib/exeshnik/config.rb",
+    "lib/exeshnik/engine.rb",
+    "lib/exeshnik/middleware.rb",
+    "lib/exeshnik/rails/controller.rb",
+    "lib/exeshnik/rails/controller/redirects.rb",
+    "lib/exeshnik/rails/controller/url_rewriting.rb",
+    "lib/exeshnik/rails/helpers.rb",
+    "lib/exeshnik/rails/helpers/javascript_helper.rb",
+    "lib/exeshnik/rails/helpers/url_helper.rb",
+    "lib/exeshnik/user.rb"
   ]
   s.homepage = "http://github.com/ahmadeeva-su/exeshnik"
   s.rubygems_version = "2.5.1"

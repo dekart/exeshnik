@@ -49,10 +49,5 @@ module Exeshnik
     def access_token
       @options['game_sid']
     end
-
-    # EXE.RU API client instantiated with user's access token
-    def api_client
-      @api_client ||= Exeshnik::Api::Client.new(access_token)
-    end
   end
 end
