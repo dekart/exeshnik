@@ -43,25 +43,5 @@ module Exeshnik
     def callback_url(protocol)
       protocol + callback_domain
     end
-
-    def oauth_client
-      @oauth_client ||= Exeshnik::Api::Client.new
-    end
-
-    # Client for open methods
-    def api_client
-      @api_client ||= Exeshnik::Api::Client.new
-    end
-
-    # Client for secure methods
-    def secure_api_client
-      @secure_client ||= Exeshnik::Api::Client.new(app_access_token)
-    end
-
-    # Fetches application access token needed for secure methods
-    # This token is bound to IP-address from which it was generated
-    def app_access_token
-      @app_access_token ||= oauth_client.get_app_access_token(config)
-    end
   end
 end
