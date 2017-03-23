@@ -18,6 +18,7 @@ Gem::Specification.new do |s|
     "README.md"
   ]
   s.files = [
+    ".ruby-version",
     "Gemfile",
     "Gemfile.lock",
     "LICENSE",
