@@ -22,7 +22,7 @@ begin
     gem.email = "ahmadeeva.su@gmail.com"
     gem.homepage = "http://github.com/ahmadeeva-su/exeshnik"
     gem.authors = ["Svetlana Tarasova"]
-    gem.version = '0.1'
+    gem.version = '0.2'
 
     gem.add_dependency "ie_iframe_cookies", '~> 0.1.2'
   end
