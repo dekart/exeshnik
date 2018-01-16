@@ -34,6 +34,7 @@ module Exeshnik
               if(typeof ExeRuApi !== 'undefined') {
                 #{ init_js }
               }
+              #{ extra_js }
             </script>
           CODE
 
