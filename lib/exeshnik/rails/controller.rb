@@ -11,9 +11,6 @@ module Exeshnik
           include Exeshnik::Rails::Controller::UrlRewriting
           include Exeshnik::Rails::Controller::Redirects
 
-          # Fix cookie permission issue in IE
-          before_filter :normal_cookies_for_ie_in_iframes!
-
           helper_method(:exeshnik, :exe_params, :exe_signed_params, :params_without_exe_data,
             :current_exe_user, :exe_canvas?
           )
