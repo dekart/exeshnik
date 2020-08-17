@@ -1,7 +1,7 @@
 module Exeshnik
   class Engine < ::Rails::Engine
     initializer "exeshnik.middleware" do |app|
-      app.middleware.insert_after(ActionDispatch::ParamsParser, Exeshnik::Middleware)
+      app.middleware.use(Exeshnik::Middleware)
     end
 
     initializer "exeshnik.controller_extension" do
