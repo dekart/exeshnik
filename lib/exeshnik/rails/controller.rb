@@ -67,13 +67,17 @@ module Exeshnik
       end
 
       def encrypt_params(params)
-        encryptor = ActiveSupport::MessageEncryptor.new("secret_key_#{ exeshnik.app_id }_#{ exeshnik.app_secret }"[0..31])
+        key = Digest::MD5.hexdigest("secret_key_#{ exeshnik.app_id }_#{ exeshnik.app_secret }")
+
+        encryptor = ActiveSupport::MessageEncryptor.new(key)
 
         encryptor.encrypt_and_sign(params)
       end
 
       def decrypt_params(encrypted_params)
-        encryptor = ActiveSupport::MessageEncryptor.new("secret_key_#{ exeshnik.app_id }_#{ exeshnik.app_secret }"[0..31])
+        key = Digest::MD5.hexdigest("secret_key_#{ exeshnik.app_id }_#{ exeshnik.app_secret }")
+
+        encryptor = ActiveSupport::MessageEncryptor.new(key)
 
         encryptor.decrypt_and_verify(encrypted_params)
       rescue ActiveSupport::MessageEncryptor::InvalidMessage, ActiveSupport::MessageVerifier::InvalidSignature
